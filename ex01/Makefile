@@ -28,7 +28,7 @@ RM				= rm -rf
 all:			$(NAME)
 
 $(NAME):		$(OBJS)
-				@g++ ${FLAGS} -o ${NAME} ${OBJS} 
+				@clang++ ${FLAGS} -o ${NAME} ${OBJS} 
 
 clean:
 				@$(RM) $(OBJS)

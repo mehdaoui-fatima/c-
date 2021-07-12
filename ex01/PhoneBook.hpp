@@ -25,10 +25,12 @@ class Contact {
 };
 
 class PhoneBook{
-    public:
+    private:
     Contact contacts[8];
-    int size;
+    
 
+    public:
+    int size;
     PhoneBook(void);
     ~PhoneBook(void);
     void        add(Contact contact);

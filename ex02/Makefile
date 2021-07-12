@@ -5,15 +5,15 @@
 #                                                     +:+ +:+         +:+      #
 #    By: fmehdaou <fmehdaou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/07/02 11:44:04 by fmehdaou          #+#    #+#              #
-#    Updated: 2021/07/12 13:44:11 by fmehdaou         ###   ########.fr        #
+#    Created: 2021/07/12 09:40:17 by fmehdaou          #+#    #+#              #
+#    Updated: 2021/07/12 12:02:00 by fmehdaou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+NAME			= Account
 
-NAME			= megaphone
-
-SRCS			= megaphone.cpp \
+SRCS			= tests.cpp Account.cpp \
+				  
 				 
 OBJS			= $(SRCS:.cpp=.o)
 
@@ -29,10 +29,10 @@ $(NAME):		$(OBJS)
 				@clang++ ${FLAGS} -o ${NAME} ${OBJS} 
 
 clean:
-				$(RM) $(OBJS)
+				@$(RM) $(OBJS)
 
 fclean:			clean
-				$(RM) $(NAME)
+				@$(RM) $(NAME)
 
 re:				fclean $(NAME)
 

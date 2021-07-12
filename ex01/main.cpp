@@ -32,10 +32,10 @@ void    searchContact(PhoneBook &phonebook)
         phonebook.printPhoneBook();
         std::cout << "What is the index of the contact you are searching for: ";
         std::cin >> index;
-        if (index < phonebook.size)
+        if (index >= 0 && index < phonebook.size)
             phonebook.search(index);
         else
-            std::cout << "no matched contact found" << std::endl     ;  
+            std::cout << "Index out of range" << std::endl     ;  
     }
     else
         std::cout << "No contact available yet!" << std::endl;
